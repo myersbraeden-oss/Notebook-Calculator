@@ -1,19 +1,20 @@
+import java.util.ArrayList;
+
 public class Page {
 
-    public String[] lines = new String[25];
+    private ArrayList<NotebookEntry> entries = new ArrayList<>();
 
-
-    public String[] getLines() {
-        return lines;
+    public void addEntry(NotebookEntry entry) {
+        entries.add(entry);
     }
 
-    public String getLine(int index) {
-        return lines[index];
+    public ArrayList<NotebookEntry> getEntries() {
+        return entries;
     }
-
-    public void setLine(int index, String text){
-        lines[index] = text;
+    public void removeEntry(NotebookEntry entry) {
+        entries.remove(entry);
     }
+ 
     
 }
 
